@@ -1,5 +1,4 @@
-
-import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
 
 /**
@@ -53,7 +52,7 @@ public interface BlockChainInterface {
   /**
    * prints the balances of the block chain.
    */
-  public void printBalances(PrintStream pen);
+  public void printBalances(PrintWriter pen);
 
   /**
    * @return the String version of block

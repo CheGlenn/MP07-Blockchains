@@ -3,6 +3,7 @@
  * Generic nodes for linked structures. Nodes are not encapsulated;
  * we assume that the client classes (in the same package) will
  * use the fields as appropriate.
+ * @source https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/labs/linked-lists.html
  */
 public class Node<T> {
   // +--------+----------------------------------------------------------

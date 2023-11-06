@@ -43,4 +43,5 @@ Joyce Gill
 https://www.baeldung.com/java-byte-arrays-hex-strings
 https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/mps/mp07.html
 https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/readings/wrappers.html
+https://rebelsky.cs.grinnell.edu/Courses/CSC207/2023Fa/labs/linked-lists.html
 ```
