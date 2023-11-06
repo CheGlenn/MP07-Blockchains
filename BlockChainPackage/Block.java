@@ -3,6 +3,12 @@ import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * Implementation of Blocks
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ */
+
 public class Block implements BlockInterface{
   // +--------+------------------------------------------------------------
   // | Fields |

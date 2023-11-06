@@ -1,4 +1,11 @@
 package BlockChainPackage;
+
+/**
+ * An interface for Hash
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ */
+
 public interface HashInterface {
   // +---------+-----------------------------------------------------------
   // | Methods |

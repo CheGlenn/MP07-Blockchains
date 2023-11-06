@@ -1,6 +1,12 @@
 package BlockChainPackage;
 import java.util.Arrays;
 
+/**
+ * An implementation for Hash
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ */
+
 public class Hash implements HashInterface{
   // +--------+------------------------------------------------------------
   // | Fields |

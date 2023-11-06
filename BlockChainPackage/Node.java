@@ -1,6 +1,6 @@
 package BlockChainPackage;
 /**
- * Simple nodes for linked structures.  Nodes are not encapsulated;
+ * Generic nodes for linked structures. Nodes are not encapsulated;
  * we assume that the client classes (in the same package) will
  * use the fields as appropriate.
  */

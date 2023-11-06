@@ -1,4 +1,11 @@
 package BlockChainPackage;
+
+/**
+ * An interface for blocks
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ */
+
 public interface BlockInterface {
   // +---------+-----------------------------------------------------------
   // | Methods |

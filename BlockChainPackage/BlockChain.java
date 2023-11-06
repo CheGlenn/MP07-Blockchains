@@ -2,6 +2,12 @@ package BlockChainPackage;
 import java.io.PrintStream;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * An Implementation for block chain
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ */
+
 public class BlockChain implements BlockChainInterface{
   // +--------+------------------------------------------------------------
   // | Fields |
