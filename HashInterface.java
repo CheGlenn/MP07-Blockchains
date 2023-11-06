@@ -1,4 +1,4 @@
-package BlockChainPackage;
+
 
 /**
  * An interface for Hash

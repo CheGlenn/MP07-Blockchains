@@ -1,4 +1,4 @@
-package BlockChainPackage;
+
 /**
  * Generic nodes for linked structures. Nodes are not encapsulated;
  * we assume that the client classes (in the same package) will

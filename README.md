@@ -16,15 +16,24 @@ is given, the program reports through System.err.
 
 ## Files
 ```
-BlockChainPackage/
-    Block.java
-    BlockChain.java
-    BlockChainInterface.java
-    BlockInterface.java
-    Hash.java
-    HashInterface.java
-    Node.java
+Block.java
+BlockChain.java
+BlockChainInterface.java
+BlockInterface.java
+Hash.java
+HashInterface.java
+Node.java
 BlockChainDriver.java
+```
+
+## How to Compile
+```
+javac -d bin/ *.java
+```
+
+## How to Run
+```
+java -cp bin BlockChainDriver <initial amount>
 ```
 
 ## Acknowledgements

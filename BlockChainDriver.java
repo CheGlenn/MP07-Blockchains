@@ -1,7 +1,12 @@
 import java.io.PrintStream;
 import java.util.Scanner;
 
-import BlockChainPackage.*;
+/**
+ * Interactive program that creates block chain based on the compilation arguments.
+ * 
+ * @author Seunghyeon (Hyeon) Kim
+ * @author Che Glenn
+ */
 
 public class BlockChainDriver {
   public static void main(String[] args) throws Exception{

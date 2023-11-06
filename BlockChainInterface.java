@@ -1,4 +1,4 @@
-package BlockChainPackage;
+
 import java.io.PrintStream;
 import java.security.NoSuchAlgorithmException;
 
