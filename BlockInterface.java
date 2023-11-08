@@ -1,5 +1,3 @@
-
-
 /**
  * An interface for blocks
  * 

@@ -10,9 +10,13 @@ public class Hash implements HashInterface{
   // +--------+------------------------------------------------------------
   // | Fields |
   // +--------+
-  /* Hex array */
+  /**
+   * Hex array (required for converting normal decimal number to hex)
+   */
   private final char[] HEX_ARRAY = "0123456789abcdef".toCharArray();
-  /* data that the hash object contains */
+  /**
+   * data that the hash object contains  
+   */
   byte[] data;
   
   // +--------------+------------------------------------------------------
@@ -51,13 +55,13 @@ public class Hash implements HashInterface{
         /* if 0, continue the loop */
         if(this.data[i] == 0){
           continue;
-        }
+        } // if
         /* Otherwise, return false */
         return false;
-      }
+      } // for
       /* When going through the loop successfully, return true. */
       return true;
-    }
+    } // if
     return false;
   } // isValid()
 
@@ -78,9 +82,9 @@ public class Hash implements HashInterface{
       Hash temp = (Hash) other;
       if(Arrays.equals(this.data, temp.getData())){
         return true;
-      }
+      } // if
       return false;
-    }
+    } // if
     return false;
   } // equals(Object)
 
@@ -100,7 +104,7 @@ public class Hash implements HashInterface{
       hexChars[2*j] = HEX_ARRAY[(int)(temp/16)];
       hexChars[2*j+1] = HEX_ARRAY[temp%16];
       j++;
-    }
+    } // for
     return new String(hexChars);
   } // byteToHex(byte[])
 } // Hash
