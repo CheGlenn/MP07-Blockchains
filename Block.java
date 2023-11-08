@@ -38,10 +38,11 @@ public class Block implements BlockInterface{
     this.amount = amt;
     this.prevHash = prevHash;
     long t = 0;
-    Hash temp = generate(t);
+    MessageDigest md = MessageDigest.getInstance("sha-256");
+    Hash temp = generate(md,t);
     while(!temp.isValid()){
       /* Iterate through t until the generated hash is valid. */
-      temp = generate(++t);
+      temp = generate(md,++t);
     } // while
     this.currentHash = temp;
     this.nonce = t;
@@ -59,7 +60,8 @@ public class Block implements BlockInterface{
     this.amount = amt;
     this.prevHash = prevHash;
     this.nonce = nonce;
-    this.currentHash = generate(nonce);
+    MessageDigest md = MessageDigest.getInstance("sha-256");
+    this.currentHash = generate(md, nonce);
   } // Block(int, int, Hash, long)
 
   // +---------+-----------------------------------------------------------
@@ -149,8 +151,7 @@ public class Block implements BlockInterface{
    * @return the mined hash
    * @throws NoSuchAlgorithmException
    */
-  private Hash generate(long i) throws NoSuchAlgorithmException{
-    MessageDigest md = MessageDigest.getInstance("sha-256");
+  private Hash generate(MessageDigest md, long i) throws NoSuchAlgorithmException{
     md.update(intToByteArr(this.getNum()));
     md.update(intToByteArr(this.getAmount()));
     if(this.hasPrevious()){
@@ -158,6 +159,7 @@ public class Block implements BlockInterface{
     } // if
     md.update(longToByteArr(i));
     Hash temp = new Hash(md.digest());
+    md.reset();
     return temp;
   } // generate(long)
 } // class Block
