@@ -21,8 +21,7 @@ public class BlockChain implements BlockChainInterface{
    * @param initial
    */
   public BlockChain(int initial) throws NoSuchAlgorithmException{
-    this.front = new Node<Block>(new Block(0, initial, null), null);
-    this.last = this.front;
+    //STUB
   } // BlockChain (int)
 
   // +---------+-----------------------------------------------------------
@@ -32,14 +31,16 @@ public class BlockChain implements BlockChainInterface{
    * @return Block mined
    */
   public Block mine(int amount) throws NoSuchAlgorithmException{
-    return new Block(this.getSize(), amount, this.last.value.getHash());
+    //STUB
+    return new Block(0, 0, new Hash(new byte[] {}));
   } // mine (int)
 
   /**
    * @return the size of the blockChain
    */
   public int getSize(){
-    return (this.last.value.getNum()-this.front.value.getNum())+1;
+    //STUB
+    return 0;
   } // getSize()
 
   /**
@@ -48,11 +49,7 @@ public class BlockChain implements BlockChainInterface{
    * @throws IllegalArgumentException
    */
   public void append(Block blk) throws IllegalArgumentException{
-    if(!blk.getHash().isValid() || blk.getPrevHash() == null){
-      throw new IllegalArgumentException();
-    } // if
-    this.last.next = new Node<Block>(blk, null);
-    this.last = this.last.next;
+    //STUB
   } // append (Block)
 
   /**
@@ -60,17 +57,7 @@ public class BlockChain implements BlockChainInterface{
    * @return whether the last node is successfully removed
    */
   public boolean removeLast() {
-    if(this.getSize() == 1){
-      return false;
-    } // if
-    Node<Block> temp = this.front;
-    for(temp = this.front; temp.next != null; temp = temp.next){
-      if(temp.next.equals(this.last)){
-        temp.next = null;
-        this.last = temp;
-        return true;
-      } // if
-    } // for
+    //STUB
     return false;
   } // removeLast ()
 
@@ -86,18 +73,7 @@ public class BlockChain implements BlockChainInterface{
    * valid and the amount is never negative)
    */
   public boolean isValidBlockChain(){
-    long alexisBalance = this.front.value.getAmount();
-    long blakeBalance = 0;
-    for(Node<Block> temp = this.front.next; temp != null; temp = temp.next){
-      if(!temp.value.getHash().isValid()){
-        return false;
-      } // if
-      alexisBalance += temp.value.getAmount();
-      blakeBalance -= temp.value.getAmount();
-      if(alexisBalance < 0 || blakeBalance < 0){
-        return false;
-      } // if
-    } // for
+    //STUB
     return true;
   } // isValidBlockChain ()
 
@@ -105,13 +81,7 @@ public class BlockChain implements BlockChainInterface{
    * prints Alexis' balance and Blake's balance through the given PrintWriter.
    */
   public void printBalances(PrintWriter pen){
-    long alexisBalance = this.front.value.getAmount();
-    long blakeBalance = 0;
-    for(Node<Block> temp = this.front.next; temp != null; temp = temp.next){
-      alexisBalance += temp.value.getAmount();
-      blakeBalance -= temp.value.getAmount();
-    } // for
-    pen.println(String.format("Alexis: %d, Blake: %d\n", alexisBalance, blakeBalance));
+    //STUB
   } // printBalances(PrintWriter)
 
   /**
@@ -120,12 +90,8 @@ public class BlockChain implements BlockChainInterface{
    * per line.
    */
   public String toString(){
-    String ret = "";
-    for(Node<Block> temp = this.front; temp != null; temp = temp.next){
-      ret += temp.value.toString();
-      ret += "\n";
-    } // for
-    return ret;
+    //STUB
+    return "";
   } // toString()
 
   /**
@@ -133,7 +99,7 @@ public class BlockChain implements BlockChainInterface{
    * @return the formatted string.
    */
   public String stringMine(int amt) throws NoSuchAlgorithmException{
-    Block temp = this.mine(amt);
-    return String.format("amount = %d, nonce = %d\n", temp.getAmount(), temp.getNonce());
+    //STUB
+    return "";
   } // stringMine(int)
 } // class BlockChain
